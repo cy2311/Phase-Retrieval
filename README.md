@@ -32,6 +32,7 @@ pip install -r requirements.txt
 - Phase retrieval parameters (Z positions, iteration counts, etc.)
 ## Initialization Phase
 graph TD
+
   A[Input Subregions] --> B[Initialize empupil parameters]
   
   B --> C[Generate Initial Pupil Function]
@@ -39,6 +40,7 @@ graph TD
   C --> D[Create Reference PSFs]
 ## Iterative Refinement:
 graph TD
+
   A[Current Pupil Estimate] --> B[Generate Aberrated PSFs]
   
   B --> C[Classify Single Molecules]
