@@ -20,7 +20,9 @@ This repository implements an Iterative Non-linear Spline Phase Retrieval (INSPR
 
 ## Installation
 git clone https://github.com/yourusername/inspr-model-generator.git
+
 cd inspr-model-generator
+
 pip install -r requirements.txt
 
 # Data Flow
@@ -31,16 +33,24 @@ pip install -r requirements.txt
 ## Initialization Phase
 graph TD
   A[Input Subregions] --> B[Initialize empupil parameters]
+  
   B --> C[Generate Initial Pupil Function]
+  
   C --> D[Create Reference PSFs]
 ## Iterative Refinement:
 graph TD
   A[Current Pupil Estimate] --> B[Generate Aberrated PSFs]
+  
   B --> C[Classify Single Molecules]
+  
   C --> D[Average PSFs by Z-position]
+  
   D --> E[Phase Retrieval Update]
+  
   E --> F[Zernike Coefficient Estimation]
+  
   F --> G[Drift Correction]
+  
   G --> A
 ## Output:
 - Final pupil function (magnitude and phase)
